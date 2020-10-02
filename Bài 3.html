@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    function isFibonacci(n) {
+        let f1 = 0;
+        let f2 = 1;
+        let fn = 0;
+        while (fn < n) {
+            fn = f2 + f1;
+            f1 = f2;
+            f2 = fn;
+        }
+        if (n < 0) {
+            return false;
+        } else if (n === 0 || n === 1) {
+            return true;
+        } else if (n === fn) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    console.log(isFibonacci(356));
+</script>
+</body>
+</html>
